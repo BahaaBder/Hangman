@@ -5,7 +5,7 @@ class Solution extends Component{
     render(){
         let arrayOfUnderScore=[]
         for(let i=0;i<4;i++){
-            arrayOfUnderScore.push("_ ")
+            arrayOfUnderScore.push(" _ ")
         }
     return(
     <div>
