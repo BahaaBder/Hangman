@@ -14,7 +14,7 @@ class App extends Component {
       score: 100,
       solution: {
         word: "CALM",
-        hint: "feel programming",
+        hint: "Your ideal mood when coding.",
       },
     };
   }
