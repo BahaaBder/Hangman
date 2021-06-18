@@ -37,8 +37,15 @@
   }
 }
 
-
-.guesses{
+.guesses {
   color: green;
   font-size: 24px;
+}
+
+.selectedLetter {
+  color: red;
+  text-decoration: line-through;
+}
+.UnselectedLetter {
+  color: green;
 }

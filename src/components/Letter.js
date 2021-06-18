@@ -1,13 +1,8 @@
-import { Component } from 'react';
+import { Component } from "react";
 
-   class Letter extends Component{
-
-    render(){
-    return (<div>
-       A
-    </div>)
-    }
-    
-    
-    }
-    export default Letter;
+class Letter extends Component {
+  render() {
+    return <span className={this.props.className}>{this.props.letter}</span>;
+  }
+}
+export default Letter;

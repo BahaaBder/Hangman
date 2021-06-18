@@ -1,24 +1,31 @@
-import { Component } from 'react';
-class Solution extends Component{
+import { Component } from "react";
+import Letter from "./Letter";
+class Solution extends Component {
+  render() {
+    let Letters = [];
+    return (
+      <div>
+        {this.props.solution.word.split("").forEach((letter) => {
+          if (this.props.letterStatus[letter]) {
+            Letters.push(letter);
+          } else {
+            Letters.push(" _ ");
+          }
+        })}
+        {Letters.map((letter) => (
+          <Letter letter={letter} />
+        ))}
 
-  
-    render(){
-        let arrayOfUnderScore=[]
-        for(let i=0;i<4;i++){
-            arrayOfUnderScore.push(" _ ")
-        }
-    return(
-    <div>
-        {
-            arrayOfUnderScore.map(item=>
-                {
-                    return (<span>{item}</span>)
-                })
-        }
-        <div>Your ideal mood when coding</div>
-    </div>
-        )
-    }
-    
-    }
-    export default Solution;
+        <div>{this.props.solution.hint}</div>
+      </div>
+    );
+  }
+}
+export default Solution;
+
+{
+  /* 
+this.props.solution.word.split("").map((letter) => (
+          <Letter letter={letter} />
+        ))} */
+}
