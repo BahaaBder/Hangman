@@ -37,15 +37,25 @@
   }
 }
 
-.guesses {
+.high-score {
   color: green;
+  font-size: 24px;
+}
+.medium-score {
+  color: rgb(231, 189, 0);
+  font-size: 24px;
+}
+.low-score {
+  color: rgb(212, 4, 4);
   font-size: 24px;
 }
 
 .selectedLetter {
   color: red;
   text-decoration: line-through;
+  cursor: pointer;
 }
 .UnselectedLetter {
   color: green;
+  cursor: pointer;
 }

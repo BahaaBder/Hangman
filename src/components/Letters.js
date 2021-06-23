@@ -8,10 +8,20 @@ class Letters extends Component {
         <div>Available Letters</div>
         {Object.keys(this.props.letterStatus).forEach((letter) => {
           if (this.props.letterStatus[letter]) {
-            Letters.push(<Letter letter={letter} className="selectedLetter" />);
+            Letters.push(
+              <Letter
+                letter={letter}
+                className="selectedLetter"
+                selectLetter={this.props.selectLetter}
+              />
+            );
           } else {
             Letters.push(
-              <Letter letter={letter} className="UnselectedLetter" />
+              <Letter
+                letter={letter}
+                className="UnselectedLetter"
+                selectLetter={this.props.selectLetter}
+              />
             );
           }
         })}

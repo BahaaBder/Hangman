@@ -18,6 +18,7 @@ class App extends Component {
       },
     };
   }
+
   generateLetterStatuses() {
     let letterStatus = {};
     for (let i = 65; i < 91; i++) {
@@ -25,6 +26,14 @@ class App extends Component {
     }
     return letterStatus;
   }
+  selectLetter = (letter) => {
+    const newLetterStatus = { ...this.state.letterStatus };
+    newLetterStatus[letter] = true;
+    this.setState({ letterStatus: newLetterStatus });
+    if (!this.state.solution.word.includes(letter)) {
+      this.setState({ score: this.state.score - 20 });
+    }
+  };
   render() {
     return (
       <div>
@@ -33,7 +42,10 @@ class App extends Component {
           letterStatus={this.state.letterStatus}
           solution={this.state.solution}
         />
-        <Letters letterStatus={this.state.letterStatus}>
+        <Letters
+          letterStatus={this.state.letterStatus}
+          selectLetter={this.selectLetter}
+        >
           <Letter></Letter>
           <Letter></Letter>
         </Letters>
