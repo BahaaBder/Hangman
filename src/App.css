@@ -59,3 +59,9 @@
   color: green;
   cursor: pointer;
 }
+.loss {
+  color: red;
+}
+.won {
+  color: green;
+}

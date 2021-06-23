@@ -10,9 +10,6 @@ class Score extends Component {
     if (this.props.score < 50 && this.props.score > 0) {
       return <div className="low-score">{this.props.score}</div>;
     }
-    if (this.props.score == 0 || this.props.score < 0) {
-      return <div className="low-score">You Loss</div>;
-    }
   }
 }
 
